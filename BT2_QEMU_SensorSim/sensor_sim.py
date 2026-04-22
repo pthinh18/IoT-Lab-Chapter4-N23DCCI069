@@ -8,15 +8,15 @@ class SimLED:
         self.pin = pin
         self.name = name
         self.is_on = False
-    
+
     def on(self):
         self.is_on = True
         print(f"[{self.name} pin {self.pin}] ON")
-        
+
     def off(self):
         self.is_on = False
         print(f"[{self.name} pin {self.pin}] OFF")
-        
+
     def blink(self, on_time=1, off_time=1):
         print(f"[{self.name}] BLINK on={on_time}s off={off_time}s")
 
@@ -28,7 +28,7 @@ class SimUltrasonic:
         self.echo = echo
         self.trigger = trigger
         self.base_distance = base_distance
-        
+
     @property
     def distance(self):
         raw = random.gauss(self.base_distance, 2.0)
@@ -43,11 +43,11 @@ class SimUltrasonic:
 class SimPotentiometer:
     def __init__(self, channel=0, initial_value=0.5):
         self._value = initial_value
-        
+
     @property
     def value(self):
         return self._value
-        
+
     def set_value(self, v):
         self._value = max(0.0, min(1.0, float(v)))
 
