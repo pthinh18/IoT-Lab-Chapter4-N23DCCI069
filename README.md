@@ -1,5 +1,8 @@
 # IoT Lab — Chapter 4: Raspberry Pi with Python
 
+![GitHub Actions](https://github.com/pthinh18/IoT-Lab-Chapter4-N23DCCI069/actions/workflows/ci.yml/badge.svg)
+![GitLab CI](https://gitlab.com/pthinh18/IoT-Lab-Chapter4-N23DCCI069/badges/main/pipeline.svg)
+
 **Họ tên:** Trần Phúc Thịnh
 **MSSV:** N23DCCI069
 **Lớp:** D23CQCI01-N
