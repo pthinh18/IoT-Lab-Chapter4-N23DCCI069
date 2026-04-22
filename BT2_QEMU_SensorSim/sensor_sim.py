@@ -1,24 +1,25 @@
 import random
 
 # --- BƯỚC 1: Class SimLED ---
+
+
 class SimLED:
     def __init__(self, pin, name="LED"):
         self.pin = pin
         self.name = name
         self.is_on = False
-        
     def on(self):
         self.is_on = True
         print(f"[{self.name} pin {self.pin}] ON")
-        
     def off(self):
         self.is_on = False
         print(f"[{self.name} pin {self.pin}] OFF")
-        
     def blink(self, on_time=1, off_time=1):
         print(f"[{self.name}] BLINK on={on_time}s off={off_time}s")
 
 # --- BƯỚC 2: Class SimUltrasonic ---
+
+
 class SimUltrasonic:
     def __init__(self, echo, trigger, base_distance=50.0):
         self.echo = echo
@@ -34,18 +35,20 @@ class SimUltrasonic:
         self.base_distance = max(2, min(400, new_val))
 
 # --- BƯỚC 3: Class SimPotentiometer (Biến trở) ---
+
+
 class SimPotentiometer:
     def __init__(self, channel=0, initial_value=0.5):
         self._value = initial_value
-        
     @property
     def value(self):
         return self._value
-        
     def set_value(self, v):
         self._value = max(0.0, min(1.0, float(v)))
 
 # --- BƯỚC 4: Block Test Module ---
+
+
 if __name__ == "__main__":
     led = SimLED(17, "TestLED")
     led.on()
